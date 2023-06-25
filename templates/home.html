@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="home">
+        <div class="callout">
+            <br><br>
+            <img src="/static/img/logo.png" style="display: block; width: 40%;">
+            <br><br><br>
+            <div id="home-desc">
+                <p>This is a website that hosts a modulo 10 (ISBN-10) and modulo 11 (ISBN-13) algorithm that allows LIC users to check the authenticity of the ISBN number of a particular book.</p>
+            </div>
+                <hr><br><br>
+                <div class="d-grid gap-2 d-md-block" id="home-buttons">
+                    <button class="btn btn-lg" type="button" onclick="window.location.href='{{url_for('form1')}}';" style="color: #1e1e1e; background-color: #e2ebe0;">
+                        ISBN-10
+                    </button>
+                    <button class="btn btn-lg" type="button" onclick="window.location.href='{{url_for('form2')}}';" style="color: #1e1e1e; background-color: #e2ebe0;">
+                        ISBN-13
+                    </button>
+                </div>
+        </div>
+    </section>
+</div>
+</body>
+{% endblock %}

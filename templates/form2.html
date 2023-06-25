@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="d-flex flex-row-reverse justify-content-center align-items-start flex-wrap" id="register">
+        <div id="register-map"  style="display: none;" >
+            <h3>Region Reference</h3>
+            <p>Click to expand in new tab.</p>
+            <a href="static/img/map-max.png" target="_blank"><img src="static/img/map-max.png" style="width:600px;"></a>
+        </div>
+        <div>
+            <h1>Enter the Book Title and its ISBN-13 Number</h1>
+            <form action="{{ url_for('processing_mod10') }}" method="post">
+                <label for="title">Title</label><br>
+                <input type="text" name="b_title" id="title" required><br><br>
+                <label for="isbn">ISBN Number</label><br>
+                <input type="text" name="b_isbn" id="isbn" value = "Ex. 9780061964367"><br><br>
+                <input type="submit" class="btn btn-lg" value="Check" style="color: #F5EFE7;  background-color: #487549; font-weight: 600; font-size: large;font-family: 'Inter';">
+                <input type="reset" class="btn btn-sm" value="Reset" style="color: #F5EFE7;  background-color: #8f1946; font-weight: 600; font-size: large;font-family: 'Inter'; margin-top: 10px;">
+            </form>  
+        </div>
+    </div>
+{% endblock %}
